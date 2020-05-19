@@ -1855,7 +1855,7 @@
         null,
         1000,
         null,
-        'https://pazata.com',
+        'https://sites.google.com/view/wildlens',
         null,
         null,
         null,
@@ -1960,11 +1960,25 @@
         normalizedPath: 'view/wildlens/home',
         pageTitle: 'Home',
     };
-    
+    function gapiLoaded() {
+        if (globals.gapiLoaded == undefined) {
+            globals.gapiLoaded = true;
+        } else {
+            //globals.gapiLoaded();
+        }
+    }
     window.messages = [];
-    
+    window.addEventListener &&
+        window.addEventListener('message', function (e) {
+            if (window.messages && e.data && e.data.magic == 'SHIC') {
+                window.messages.push(e);
+            }
+        });
 </script>
-
+<script
+    src="https://apis.google.com/js/client.js?onload=gapiLoaded"
+    nonce="Y3YvPGpE48j6sqAeJnhpsw"
+></script>
 
 
 	<script type="text/javascript" nonce="Y3YvPGpE48j6sqAeJnhpsw">(function () {/*
