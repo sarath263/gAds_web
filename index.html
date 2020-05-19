@@ -1960,20 +1960,9 @@
         normalizedPath: 'view/wildlens/home',
         pageTitle: 'Home',
     };
-    function gapiLoaded() {
-        if (globals.gapiLoaded == undefined) {
-            globals.gapiLoaded = true;
-        } else {
-            //globals.gapiLoaded();
-        }
-    }
+    
     window.messages = [];
-    window.addEventListener &&
-        window.addEventListener('message', function (e) {
-            if (window.messages && e.data && e.data.magic == 'SHIC') {
-                window.messages.push(e);
-            }
-        });
+    
 </script>
 
 
